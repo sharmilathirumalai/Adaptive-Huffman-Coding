@@ -1,0 +1,63 @@
+Huffman code
+============
+A algorithm that compress and decompress the file by encoding & decoding the data in binary form.
+
+Basic Huffman - Does both encoding and decoding
+Adaptive - Does only encoding
+
+Packages
+--------
+
+- Default: Has the main class
+- Util: Has heap class that implement Min-Heap Data Structure
+- FileCompression: Has interface and classes related to huffman coding
+
+Classes & interface
+-------------------
+
+- Filecomperssor: interface that has the major functions of huffman coding.
+- Huffman: Has the method to encode and decode the given file.
+- HuffmanNode: A template of huffman node and its behaviour.
+- AdaptiveHuffman : has encode method to perform adaptive huffman
+
+Method
+------
+
+constructMinHeap #util.Heap
+                 A Min-heap implementation using HuffmanNode.
+
+insertNode #util.Heap
+                 Inserts a new node into min-heap and rebuilds it.
+
+compare #util.Heap
+                 Method to compare and find the node that has less value.
+
+encode #filecompression.Huffman
+                 Reads and encodes the file content as 0's and 1's.
+                 Writes the meta information - words frequency as firstline in output file.
+                 Writes the encoded value to output file.
+
+constructTree #filecompression.Huffman
+                 Constructs huffman tree from given heap set and returns it to encode function.
+
+decode #filecompression.Huffman
+                  Constructs the frequencyMap from the meta information.
+                  Rebuilds the tree with constructed frequencyMap.
+                  Replaces the bit values with respective characters.
+
+codeBook #filecompression.Huffman
+                  Constructs the map of Character and its respective encoding from the constructed huffman tree.
+
+
+Assumptions & Constraints
+-------------------------
+
+- Tree has the maximum size of 256 limited to the total number of alphabets.
+- "#" & "| will not be present in file content.
+- The file does not contain any non-printable characters
+
+References
+----------
+
+1) Let's Build a Min Heap – randerson112358 – Medium [https://medium.com/@randerson112358/lets-build-a-min-heap-4d863cac6521]
+2) Regular-Expressions.info - Regex Tutorial, Examples and Reference - Regexp Patterns [https://www.regular-expressions.info/]
