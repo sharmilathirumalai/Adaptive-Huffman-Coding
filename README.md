@@ -1,5 +1,5 @@
 ## Adaptive Huffman
-A adaptive form of Huffaman Coding algorithm that compress and decompress the file by encoding & decoding the data in binary form.
+An adaptive form of Huffman Coding algorithm that compresses and decompresses the file by encoding & decoding the data in binary form.
 
 ## Data Structures
 * Huffman Tree - Tree constructed by [Huffman Node](https://github.com/sharmilathirumalai/Adaptive-Huffman-Coding/blob/master/src/filecompression/HuffmanNode.java)
